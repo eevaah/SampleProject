@@ -19,7 +19,7 @@ enum NetworkService {
 extension NetworkService: TargetType {
     var baseURL: URL {
        // return URL(string: "https://jsonplaceholder.typicode.com")!
-        return URL(string: "https://api.github.com/repos/eevaah/SampleProject/pulls?")!
+        return URL(string: "https://api.github.com/repos/eevaah/SampleProject/pulls")!
                     //"\(APIConstants.NetworkConstants.baseURL)eevaah/SAMPLEPROJECT/ \(APIConstants.NetworkConstants.endPoint)")!
     }
     
@@ -33,7 +33,7 @@ extension NetworkService: TargetType {
             return "state=close"
             
         case .allRequests:
-            return "state=all"
+            return ""
         }
     }
     

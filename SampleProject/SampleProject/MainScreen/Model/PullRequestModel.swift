@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PullRequestData: Codable {
+struct PullRequestData {
     let url: String
     let id: Int
     let nodeID: String
@@ -38,14 +38,14 @@ struct PullRequestData: Codable {
 }
 
 // MARK: - Base
-struct Base: Codable {
+struct Base {
     let label, ref, sha: String
     let user: User
     let repo: Repo
 }
 
 // MARK: - Repo
-struct Repo: Codable {
+struct Repo {
     let id: Int
     let nodeID, name, fullName: String
     let repoPrivate: Bool
@@ -93,7 +93,7 @@ struct Repo: Codable {
 }
 
 // MARK: - User
-struct User: Codable {
+struct User {
     let login: String
     let id: Int
     let nodeID: String
@@ -109,13 +109,13 @@ struct User: Codable {
 }
 
 // MARK: - Links
-struct Links: Codable {
+struct Links {
     let linksSelf, html, issue, comments: Comments
     let reviewComments, reviewComment, commits, statuses: Comments
 }
 
 // MARK: - Comments
-struct Comments: Codable {
+struct Comments {
     let href: String
 }
 
